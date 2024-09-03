@@ -1,0 +1,21 @@
+Escreva uma consulta SQL que mostre todas as possíveis combinações de clientes e produtos, ou seja, cada cliente combinado com cada produto disponível.
+------------
+
+CREATE TABLE clientes (
+    id SERIAL PRIMARY KEY,
+    nome_cliente VARCHAR(100)
+);
+
+CREATE TABLE produtos (
+    id SERIAL PRIMARY KEY,
+    nome_produto VARCHAR(100)
+);
+
+INSERT INTO clientes (nome_cliente) VALUES 
+('Cliente A'),
+('Cliente B'),
+('Cliente C');
+
+INSERT INTO produtos (nome_produto) VALUES 
+('Produto X'),
+('Produto Y');

@@ -1,0 +1,15 @@
+  Aumento/ dominuição de paginas
+  update sql_livro
+  set pagina = pagina - 1
+  returning *; 
+
+
+Aumento geral dos valores
+   update sql_livro
+  set preco = preco * 1.5
+  returning *; 
+
+Queima de estoque
+     update sql_livro
+  set preco = preco * 0.5
+  returning *; 

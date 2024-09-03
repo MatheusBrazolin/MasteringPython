@@ -1,0 +1,18 @@
+create table peixes(
+  id serial primary key,
+  especie varchar,
+  peso float8
+);
+
+insert into peixes (especie, peso)
+  values
+  ('A', 10),
+  ('B', 3),
+  ('C', 5.5),
+  ('A', 12),
+  ('C', 1.5),
+  ('C', 0.9),
+  ('D', 20),
+  ('B', 2.5),
+  ('D', 25),
+  ('E', 95);

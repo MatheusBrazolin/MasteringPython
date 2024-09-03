@@ -1,0 +1,23 @@
+Escreva uma consulta SQL que mostre o nome dos clientes e o nome dos vendedores, incluindo todos os clientes e todos os vendedores, mesmo que não estejam associados.
+--------------
+
+CREATE TABLE clientes (
+    id SERIAL PRIMARY KEY,
+    nome_cliente VARCHAR(100),
+    vendedor_id INT
+);
+
+CREATE TABLE vendedores (
+    id SERIAL PRIMARY KEY,
+    nome_vendedor VARCHAR(100)
+);
+
+INSERT INTO clientes (nome_cliente, vendedor_id) VALUES 
+('Empresa A', 1),
+('Empresa B', 2),
+('Empresa C', NULL);
+
+INSERT INTO vendedores (nome_vendedor) VALUES 
+('Vendedor X'),
+('Vendedor Y'),
+('Vendedor Z');

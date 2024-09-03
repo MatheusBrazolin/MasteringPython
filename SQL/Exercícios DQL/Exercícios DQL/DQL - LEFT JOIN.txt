@@ -1,0 +1,24 @@
+Escreva uma consulta SQL que mostre o nome dos empregados e o nome dos departamentos, incluindo aqueles que não estão alocados em nenhum departamento.
+------------
+
+CREATE TABLE empregados (
+    id SERIAL PRIMARY KEY,
+    nome VARCHAR(100),
+    departamento_id INT
+);
+
+CREATE TABLE departamentos (
+    id SERIAL PRIMARY KEY,
+    nome_departamento VARCHAR(100)
+);
+
+INSERT INTO empregados (nome, departamento_id) VALUES 
+('João', 1),
+('Maria', 2),
+('Ana', NULL),
+('Carlos', 3);
+
+INSERT INTO departamentos (nome_departamento) VALUES 
+('Recursos Humanos'),
+('Financeiro'),
+('TI');

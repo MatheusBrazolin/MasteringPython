@@ -1,0 +1,25 @@
+Escreva uma consulta SQL que mostre o nome dos alunos e o nome dos cursos em que eles estão matriculados
+
+-------------
+
+CREATE TABLE alunos (
+    id SERIAL PRIMARY KEY,
+    nome VARCHAR(100),
+    curso_id INT
+);
+
+CREATE TABLE cursos (
+    id SERIAL PRIMARY KEY,
+    nome_curso VARCHAR(100)
+);
+
+INSERT INTO alunos (nome, curso_id) VALUES 
+('João', 1),
+('Maria', 2),
+('Ana', 1),
+('Carlos', 3);
+
+INSERT INTO cursos (nome_curso) VALUES 
+('Matemática'),
+('Física'),
+('Química');

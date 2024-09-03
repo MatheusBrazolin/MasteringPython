@@ -1,0 +1,24 @@
+Escreva uma consulta SQL que mostre o nome dos produtos e o nome das categorias, incluindo todas as categorias, mesmo que não tenham produtos associados.
+---------------
+
+CREATE TABLE produtos (
+    id SERIAL PRIMARY KEY,
+    nome_produto VARCHAR(100),
+    categoria_id INT
+);
+
+CREATE TABLE categorias (
+    id SERIAL PRIMARY KEY,
+    nome_categoria VARCHAR(100)
+);
+
+INSERT INTO produtos (nome_produto, categoria_id) VALUES 
+('Laptop', 1),
+('Cadeira', 2),
+('Mesa', 3),
+('Caneta', NULL);
+
+INSERT INTO categorias (nome_categoria) VALUES 
+('Eletrônicos'),
+('Móveis'),
+('Papelaria');
